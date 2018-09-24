@@ -1,2 +1,7 @@
-2-5, 6, 10, 12
-3-4, 13
+public class Solution1 {
+
+    public static void main(String[] args) {
+        // 2 - 5
+    }
+
+}
