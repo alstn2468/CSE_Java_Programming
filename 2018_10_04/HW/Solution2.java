@@ -1,14 +1,28 @@
 
-import java.util.Scanner;
-
 public class Solution2 {
 
+	public static boolean isInteger(String input) {
+		try {
+
+			Integer.parseInt(input);
+			return true;
+
+		} catch (NumberFormatException e) {
+
+			return false;
+
+		}
+	}
+
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		int sum = 0;
 
-        3 - 12
+		for (int i = 0; i < args.length; i++) {
+			if (isInteger(args[i]))
+				sum +=  Integer.parseInt(args[i]);
+		}
 
-		scanner.close();
+		System.out.println(sum);
 
 	}
 
