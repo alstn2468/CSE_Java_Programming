@@ -1,8 +1,8 @@
 
-public class Solution1 {
+public class Solution2 {
 
 	public static void main(String[] args) {
-        4-2
+        4-4
 
 	}
 
