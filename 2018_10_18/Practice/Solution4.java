@@ -23,15 +23,14 @@ abstract class Converter {
 }
 
 class Won2Dollar extends Converter {
-	double dollar;
 
 	public Won2Dollar(double dollar) {
-		this.dollar = dollar;
+		ratio = dollar;
 	}
 
 	@Override
 	protected double convert(double src) {
-		return src / this.dollar;
+		return src / ratio;
 	}
 
 	@Override
