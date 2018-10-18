@@ -2,7 +2,7 @@
 public class Solution1 {
 
     public static void main(String[] args) {
-        5-4
+        5-5
 
     }
 }
