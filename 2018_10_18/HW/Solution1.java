@@ -35,15 +35,14 @@ abstract class Converter {
 }
 
 class Km2Mile extends Converter {
-	double mile;
 
 	public Km2Mile(double mile) {
-		this.mile = mile;
+		ratio = mile;
 	}
 
 	@Override
 	protected double convert(double src) {
-		return src / this.mile;
+		return src / ratio;
 	}
 
 	@Override
