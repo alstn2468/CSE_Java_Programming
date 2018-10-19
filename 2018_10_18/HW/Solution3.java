@@ -59,8 +59,8 @@ class ColorPoint extends Point {
 	}
 
 	public String toString() {
-		return this.color + "색의 " + "( " + this.x +
-				", " + this.y + " )의 점";
+		return this.color + "색의 " + "( " + getX() +
+				", " + getY() + " )의 점";
 
 	}
 }
