@@ -22,7 +22,7 @@ class Circle implements Shape {
 	public double getArea() { return PI * radius * radius; }
 }
 
-public class Solution {
+public class Solution2 {
 
 	public static void main(String[] args) {
 		Shape donut = new Circle(10);
