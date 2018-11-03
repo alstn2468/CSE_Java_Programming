@@ -71,6 +71,7 @@ class GraphicEditor {
 					p.draw();
 					p = p.getNext();
 				}
+				
 				break;
 
 			case 4 :
@@ -142,8 +143,10 @@ class GraphicEditor {
 	         start = end = obj;
 
 		} else {
+
 			end.setNext(obj);
 			end = obj;
+
 		}
 	}
 }
