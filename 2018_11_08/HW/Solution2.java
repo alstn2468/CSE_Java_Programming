@@ -1,5 +1,111 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+class CalculateActionListener implements ActionListener {
+	JTextField inputField;
+	JTextField outputField;
+	JButton button;
+
+	public CalculateActionListener(JTextField inputField, JTextField outputField, JButton button) {
+		this.inputField = inputField;
+		this.outputField = outputField;
+		this.button = button;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String str = inputField.getText();
+		String [] strings = str.split("");
+		String temp = "";
+		String op = "";
+
+		int f = 0, s = 0;
+		double result = 0.0;
+
+		boolean check = false;
+
+		for (int i = 0; i < strings.length; i++) {
+
+			if (check) {
+				temp += strings[i];
+				s = Integer.parseInt(temp);
+			}
+
+			if (strings[i].equals("+") || strings[i].equals("-")
+					|| strings[i].equals("x") || strings[i].equals("/")) {
+
+				op = strings[i];
+
+				for (int j = 0; j < i; j++) {
+					temp += strings[j];
+					f = Integer.parseInt(temp);
+				}
+
+				check = true;
+				temp = "";
+			}
+
+		}
+
+
+		switch (op) {
+
+		case "+":
+			result = f + s;
+			break;
+
+		case "-":
+			result = f - s;
+			break;
+
+		case "x":
+			result = f * s;
+			break;
+
+		case "/":
+			if (s == 0)
+				break;
+
+			else
+				result = (double) f / (double) s;
+		}
+
+		outputField.setText(Double.toString(result));
+	}
+
+}
+
+class CEActionListener implements ActionListener {
+	JTextField inputField;
+
+	public CEActionListener(JTextField inputField) {
+		this.inputField = inputField;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		inputField.setText("");
+	}
+
+}
+
+class NumberActionListener implements ActionListener {
+	JTextField inputField;
+	JButton button;
+
+	public NumberActionListener(JTextField inputField, JButton button) {
+		this.inputField = inputField;
+		this.button = button;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		inputField.setText(inputField.getText() + button.getText());
+	}
+
+}
 
 public class Solution2 extends JFrame {
 	public Solution2() {
@@ -42,7 +148,7 @@ public class Solution2 extends JFrame {
 		for (int i = 0; i < buttons.length; i++) {
 
 			if (i >= 12) {
-				buttons[i].setBackground(Color.BLUE);
+				buttons[i].setBackground(Color.CYAN);
 			}
 
 			panelCenter.add(buttons[i]);
@@ -59,6 +165,25 @@ public class Solution2 extends JFrame {
 		panelSouth.setBackground(Color.YELLOW);
 
 		c.add(panelSouth, BorderLayout.SOUTH);
+
+		for (int i = 0; i < buttons.length; i++) {
+			if (i == 10) {
+
+				ActionListener listener = new CEActionListener(inputField);
+				buttons[i].addActionListener(listener);
+
+			} else if (i == 11) {
+
+				ActionListener listener = new CalculateActionListener(inputField, outputField, buttons[i]);
+				buttons[i].addActionListener(listener);
+
+			} else {
+
+				ActionListener listener = new NumberActionListener(inputField, buttons[i]);
+				buttons[i].addActionListener(listener);
+
+			}
+		}
 
 		setSize(300, 300);
 		setVisible(true);
