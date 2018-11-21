@@ -8,7 +8,8 @@ class CalculateActionListener implements ActionListener {
 	JTextField outputField;
 	JButton button;
 
-	public CalculateActionListener(JTextField inputField, JTextField outputField, JButton button) {
+	public CalculateActionListener(JTextField inputField,
+					JTextField outputField, JButton button) {
 		this.inputField = inputField;
 		this.outputField = outputField;
 		this.button = button;
