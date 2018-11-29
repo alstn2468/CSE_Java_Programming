@@ -11,10 +11,10 @@ public class LabelEx extends JFrame {
 
 		JLabel textLabel1 = new JLabel("사랑합니다.");
 
-		ImageIcon beauty = new ImageIcon("images/beauty.jpg");
+		ImageIcon beauty = new ImageIcon("./images/beauty.jpg");
 		JLabel imageLabel = new JLabel(beauty);
 
-		ImageIcon normalIcon = new ImageIcon("images/normalIcon.gif");
+		ImageIcon normalIcon = new ImageIcon("./images/normalIcon.gif");
 		JLabel label = new JLabel("보고싶으면 전화하세요",
 								normalIcon, SwingConstants.CENTER);
 
