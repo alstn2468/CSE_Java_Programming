@@ -49,6 +49,7 @@ public class Solution1 extends JFrame {
 			}
 		});
 
+		// Java Lambda식 사용
 		// active.addItemListener((e) -> {
         //     int selected = e.getStateChange() == ItemEvent.SELECTED ? 1 : -1;
         //     btn.setEnabled(selected == -1);
