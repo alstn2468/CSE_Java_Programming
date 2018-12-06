@@ -13,7 +13,7 @@ public class Solution1 {
 
 			System.out.println("전화번호 입력 프로그램입니다.");
 
-			while(true) {
+			while (true) {
 				System.out.print("이름 전화번호 >> ");
 				String line = scanner.nextLine();
 

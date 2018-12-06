@@ -13,8 +13,8 @@ public class Solution3 {
             int total = fin.available();
             int count = 0;
 
-            while((c = fin.read()) != -1) {
-                if(count == total / 10) {
+            while ((c = fin.read()) != -1) {
+                if (count == total / 10) {
                     System.out.print("*");
                     count = 0;
                 }
@@ -25,7 +25,7 @@ public class Solution3 {
             fin.close();
             fout.close();
         }
-        catch(IOException e) {
+        catch (IOException e) {
             System.out.println("파일 입출력 오류");
         }
 	}

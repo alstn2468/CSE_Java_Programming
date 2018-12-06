@@ -15,7 +15,7 @@ public class Solution2 {
 
 			fin.close();
 		}
-		catch(IOException e) {
+		catch (IOException e) {
 			System.out.println("입출력 오류");
 		}
 	}

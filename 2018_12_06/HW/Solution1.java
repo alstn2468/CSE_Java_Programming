@@ -9,7 +9,7 @@ public class Solution1 {
 
 		System.out.println(title + "관리시스템입니다.");
 
-		for(int i = 0; i < 5; i++) {
+		for (int i = 0; i < 5; i++) {
 			System.out.print("이름과 학점>> ");
 
 			String name = scanner.next();
@@ -27,14 +27,13 @@ public class Solution1 {
 		Set<String> nameSet = scoreMap.keySet();
 		Iterator<String> it = nameSet.iterator();
 
-		while(it.hasNext()) {
+		while (it.hasNext()) {
 			String name = it.next();
 			double score = scoreMap.get(name);
 
-			if(score > cutline)
+			if (score > cutline)
 				System.out.print(name + " ");
 		}
-
 		System.out.println();
 	}
 }

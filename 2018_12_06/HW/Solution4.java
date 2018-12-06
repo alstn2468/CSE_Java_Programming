@@ -10,7 +10,7 @@ public class Solution4 {
 		try {
 			Scanner fScanner = new Scanner(new FileReader(new File(fileName)));
 
-			while(fScanner.hasNext()) {
+			while (fScanner.hasNext()) {
 				String name = fScanner.next();
 				String tel = fScanner.next();
 				phoneMap.put(name, tel);
@@ -26,19 +26,19 @@ public class Solution4 {
 
 		Scanner scanner = new Scanner(System.in);
 
-		while(true) {
+		while (true) {
 			System.out.print("이름>> ");
 			String name = scanner.next();
 
-			if(name.equals("그만"))
+			if (name.equals("그만"))
 				break;
 
 			String tel = phoneMap.get(name);
 
-			if(tel == null) {
+			if (tel == null) {
 				System.out.println("찾는 이름이 없습니다.");
 			}
-			else{
+			else {
 				System.out.println(tel);
 			}
 		}
